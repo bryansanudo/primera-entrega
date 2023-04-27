@@ -27,6 +27,11 @@ const Navbar = ({ setAuth }) => {
       link: "getStadistics",
       name: "Mostrar Estadisticas",
     },
+    {
+      id: 4,
+      link: "rutaNueva",
+      name: "nuevaRuta",
+    },
   ];
 
   return (
@@ -90,7 +95,7 @@ const Navbar = ({ setAuth }) => {
 
             <BiUserCircle
               onClick={handlerLogout}
-              className="text-2xl cursor-pointer hover:text-[#36b5d3] duration-300"
+              className="text-2xl cursor-pointer hover:text-[#36b5d3] duration-300 hover:scale-110"
             />
           </div>
         </div>
@@ -110,7 +115,7 @@ const Navbar = ({ setAuth }) => {
               to={link}
               key={id}
             >
-              <li className="p-4 uppercase cursor-pointer duration-300 hover:text-thPrimary">
+              <li className="p-4 uppercase cursor-pointer duration-300 hover:text-[#36b5d3]">
                 {name}
               </li>
             </Link>

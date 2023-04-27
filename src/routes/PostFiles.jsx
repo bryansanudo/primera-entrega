@@ -3,66 +3,80 @@ import React from "react";
 const PostFiles = () => {
   return (
     <>
-      <section className="bg-gray-100">
-        <div className="mx-auto max-w-screen-xl px-4 py-40 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
-            <div className="lg:col-span-2 lg:py-12">
-              <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
-                Crear Expedientes
-              </h1>
-              <p className="max-w-xl text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti tempore temporibus aliquid nulla, nisi mollitia totam.
-                Sunt, exercitationem. Officiis, cum hic. Id doloremque neque
-                maiores quos itaque ipsa sapiente facere.
-              </p>
-
-              <div className="mt-8">
-                <p className="text-2xl font-bold text-[#36b5d3]">
-                  Informacion relevante
-                </p>
-
-                <address className="mt-2 not-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Veniam reprehenderit, animi veritatis velit labore obcaecati,
-                  quas doloribus magni maiores illum doloremque nihil ea
-                  repellat ratione numquam sint. In, tempore maiores.
-                </address>
-              </div>
-            </div>
-
-            <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 ">
-              <div className="flex flex-col gap-4">
-                <input
-                  className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                  placeholder="Campo 1"
-                  type="text"
-                  id="name"
-                />
-
-                <input
-                  className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                  placeholder="Campo 2"
-                  type="text"
-                  id="name"
-                />
-
-                <input
-                  className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                  placeholder="Campo 3"
-                  type="text"
-                  id="name"
-                />
-              </div>
-              <div className="pt-10 text-center">
-                <button className="inline-block w-full rounded-lg bg-[#36b5d3] px-5 py-3 font-medium text-white sm:w-auto">
-                  Crear Expediente
-                </button>
-              </div>
-            </div>
-          </div>
+      <form className="mx-10 pt-40">
+        <div className="mb-6">
+          <label
+            htmlFor="email"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Your email
+          </label>
+          <input
+            type="email"
+            id="email"
+            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+            placeholder="name@flowbite.com"
+            required
+          />
         </div>
-      </section>
+        <div className="mb-6">
+          <label
+            htmlFor="password"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Your password
+          </label>
+          <input
+            type="password"
+            id="password"
+            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+            required
+          />
+        </div>
+        <div className="mb-6">
+          <label
+            htmlFor="repeat-password"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Repeat password
+          </label>
+          <input
+            type="password"
+            id="repeat-password"
+            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+            required
+          />
+        </div>
+        <div className="flex items-start mb-6">
+          <div className="flex items-center h-5">
+            <input
+              id="terms"
+              type="checkbox"
+              value=""
+              className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+              required
+            />
+          </div>
+          <label
+            htmlFor="terms"
+            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >
+            I agree with the{" "}
+            <a
+              href="#"
+              className="text-blue-600 hover:underline dark:text-blue-500"
+            >
+              terms and conditions
+            </a>
+          </label>
+        </div>
+        <button
+          type="submit"
+          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Register new account
+        </button>
+      </form>
     </>
   );
 };

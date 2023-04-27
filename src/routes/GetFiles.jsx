@@ -1,7 +1,53 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import ProgressBar from "@/components/ProgressBar";
 
 const GetFiles = () => {
+  const data = [
+    {
+      id: 1,
+      name: "Obra Recursiva",
+      date: "27 Abril 2023",
+      user: "Claudia Millan",
+      percentage: "45",
+    },
+    {
+      id: 2,
+      name: "Prueba Obra",
+      date: "27 marzo 2023",
+      user: "Bryan",
+      percentage: "90",
+    },
+    {
+      id: 3,
+      name: "obra ejemplo",
+      date: "27 Abril 2023",
+      user: "Claudia Millan",
+      percentage: "45",
+    },
+    {
+      id: 4,
+      name: "prueba licitacion",
+      date: "27 Abril 2023",
+      user: "Claudia Millan",
+      percentage: "100",
+    },
+    {
+      id: 5,
+      name: "licitacion obra",
+      date: "27 Abril 2023",
+      user: "bryan",
+      percentage: "45",
+    },
+    {
+      id: 6,
+      name: "Obra Recursiva",
+      date: "27 Abril 2023",
+      user: "andres",
+      percentage: "30",
+    },
+  ];
+
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden">
@@ -18,30 +64,38 @@ const GetFiles = () => {
             </p>
           </div>
 
-          <div className="flex ">
-            <div className="p-4 w-[500px] mx-auto ">
-              <div className="h-full p-6 rounded-lg flex flex-col relative overflow-hidden shadow-[#36b5d3] shadow-sm">
-                <h1 className="text-3xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">
-                  Expediente #
-                </h1>
-                <div className="flex items-center gap-4 text-gray-600 mb-2">
-                  <p className="font-bold">campo 1</p>
-                  <p>valor </p>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8  ">
+            {data.map((data) => (
+              <div className="md:w-[400px] w-[300px] mx-auto  ">
+                <div className="h-full p-6 rounded-lg flex flex-col relative overflow-hidden shadow-[#36b5d3] shadow-sm">
+                  <p className="text-3xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">
+                    <span className="mr-2">{data.name}</span>
+                    <span>{data.id}</span>
+                  </p>
+
+                  <div className="flex items-center gap-4 text-gray-600 mb-2">
+                    <p className="font-bold">Quien cargo</p>
+                    <p>{data.user}</p>
+                  </div>
+                  <div className="flex items-center gap-4 text-gray-600 mb-2">
+                    <p className="font-bold">Fecha de creación</p>
+                    <p>{data.date}</p>
+                  </div>
+
+                  <div>
+                    <ProgressBar
+                      progressPercentage={data.percentage}
+                      progressName={"Intregracion Documental"}
+                    />
+                  </div>
+
+                  <button className="flex items-center justify-between mx-auto text-white bg-gray-400 border-0 py-2 px-4 w-[200px] focus:outline-none hover:bg-gray-500 rounded">
+                    Detalles
+                    <AiOutlineArrowRight />
+                  </button>
                 </div>
-                <div className="flex items-center gap-4 text-gray-600 mb-2">
-                  <p className="font-bold">campo 2</p>
-                  <p>valor </p>
-                </div>
-                <div className="flex items-center gap-4 text-gray-600 mb-6">
-                  <p className="font-bold">campo 3</p>
-                  <p>valor </p>
-                </div>
-                <button className="flex items-center justify-between mx-auto text-white bg-gray-400 border-0 py-2 px-4 w-[200px] focus:outline-none hover:bg-gray-500 rounded">
-                  Detalles
-                  <AiOutlineArrowRight />
-                </button>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
