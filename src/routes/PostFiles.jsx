@@ -5,48 +5,123 @@ const PostFiles = () => {
     <>
       <form className="mx-10 pt-40">
         <div className="mb-6">
-          <label
-            htmlFor="email"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Your email
+          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            Nombre de la obra
           </label>
           <input
-            type="email"
-            id="email"
-            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-            placeholder="name@flowbite.com"
-            required
-          />
-        </div>
-        <div className="mb-6">
-          <label
-            htmlFor="password"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Your password
-          </label>
-          <input
-            type="password"
-            id="password"
+            type="text"
+            id="nameFile"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
             required
           />
         </div>
         <div className="mb-6">
-          <label
-            htmlFor="repeat-password"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Repeat password
+          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            Ejercicio
           </label>
           <input
-            type="password"
-            id="repeat-password"
+            type="text"
+            id="exercise"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
             required
           />
         </div>
+        <div className="mb-6">
+          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            Numero de obra
+          </label>
+          <input
+            type="text"
+            id="numberFile"
+            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+            required
+          />
+        </div>
+
+        <div className="grid grid-cols-3 gap-4">
+          <div className="mb-6">
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Monto Asignado
+            </label>
+            <input
+              type="text"
+              id="assignedAmount"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Monto contratado
+            </label>
+            <input
+              type="text"
+              id="contractedAmoutn"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="repeat-password"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Monto Ejercido
+            </label>
+            <input
+              type="password"
+              id="exercisedAmount"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+              required
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-3 gap-4">
+          <div className="mb-6">
+            <label
+              htmlFor="repeat-password"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Repeat password
+            </label>
+            <input
+              type="password"
+              id="repeat-password"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="repeat-password"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Repeat password
+            </label>
+            <input
+              type="password"
+              id="repeat-password"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="repeat-password"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Repeat password
+            </label>
+            <input
+              type="password"
+              id="repeat-password"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+              required
+            />
+          </div>
+        </div>
+
         <div className="flex items-start mb-6">
           <div className="flex items-center h-5">
             <input

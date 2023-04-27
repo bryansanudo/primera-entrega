@@ -66,7 +66,7 @@ const GetFiles = () => {
 
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8  ">
             {data.map((data) => (
-              <div className="md:w-[400px] w-[300px] mx-auto  ">
+              <div key={data.id} className="md:w-[400px] w-[300px] mx-auto  ">
                 <div className="h-full p-6 rounded-lg flex flex-col relative overflow-hidden shadow-[#36b5d3] shadow-sm">
                   <p className="text-3xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">
                     <span className="mr-2">{data.name}</span>

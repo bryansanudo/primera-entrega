@@ -69,7 +69,7 @@ const Navbar = ({ setAuth }) => {
           />
         </div>
       </nav> */}
-      <div className="fixed w-full h-16 bg-gray-900 text-white z-20  ">
+      <div className="w-full h-16 bg-gray-900 text-white z-20  ">
         <div className="flex justify-between  md:gap-5 items-center max-w-screen-xl mx-auto px-8 h-full">
           <div className="hidden lg:flex items-center">
             <ul className="flex ">
