@@ -1,4 +1,6 @@
 import React from "react";
+import { HiOutlineArrowSmUp } from "react-icons/hi";
+import { HiOutlineArrowSmDown } from "react-icons/hi";
 
 const PostFiles = () => {
   return (
@@ -40,7 +42,7 @@ const PostFiles = () => {
 
         <div className="grid grid-cols-3 gap-4">
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <label className="text-center block mb-2 text-sm font-medium text-gray-900 dark:text-white">
               Monto Asignado
             </label>
             <input
@@ -51,7 +53,7 @@ const PostFiles = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <label className="text-center block mb-2 text-sm font-medium text-gray-900 dark:text-white">
               Monto contratado
             </label>
             <input
@@ -62,10 +64,7 @@ const PostFiles = () => {
             />
           </div>
           <div className="mb-6">
-            <label
-              htmlFor="repeat-password"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
+            <label className="text-center block mb-2 text-sm font-medium text-gray-900 dark:text-white">
               Monto Ejercido
             </label>
             <input
@@ -79,50 +78,178 @@ const PostFiles = () => {
 
         <div className="grid grid-cols-3 gap-4">
           <div className="mb-6">
-            <label
-              htmlFor="repeat-password"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Repeat password
-            </label>
-            <input
-              type="password"
-              id="repeat-password"
-              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-              required
-            />
+            <div className="dropdown dropdown-bottom flex items-center justify-center">
+              <label
+                tabIndex={0}
+                className="block cursor-pointer  text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Modalidad
+              </label>
+              <label className="swap ">
+                <input type="checkbox" />
+                <HiOutlineArrowSmDown />
+                {/*  <HiOutlineArrowSmUp className="swap-off" /> */}
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu text-center shadow bg-base-100 rounded-box w-full"
+              >
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 hover:bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Admin. Directa
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 border hover:bg-gray-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Contrato
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 border hover:bg-gray-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Mixto
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="mb-6">
-            <label
-              htmlFor="repeat-password"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Repeat password
-            </label>
-            <input
+            <div className="dropdown dropdown-bottom flex items-center justify-center">
+              <label
+                tabIndex={0}
+                className="block cursor-pointer  text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Tipo de adjudicación
+              </label>
+              <label className="swap ">
+                <input type="checkbox" />
+                <HiOutlineArrowSmDown />
+                {/*  <HiOutlineArrowSmUp className="swap-off" /> */}
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu text-center shadow bg-base-100 rounded-box w-full"
+              >
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 hover:bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Invitacion Restringida a 5 proveedores
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 border hover:bg-gray-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Invitacion Restringida a 3 proveedores
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 border hover:bg-gray-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Licitación Pública
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 border hover:bg-gray-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Adjudicación Directa
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* <input
               type="password"
               id="repeat-password"
               className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
               required
-            />
+            /> */}
           </div>
           <div className="mb-6">
-            <label
-              htmlFor="repeat-password"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Repeat password
-            </label>
-            <input
+            <div className="dropdown dropdown-bottom flex items-center justify-center">
+              <label
+                tabIndex={0}
+                className="block cursor-pointer  text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Tipo de contrato
+              </label>
+              <label className="swap ">
+                <input type="checkbox" />
+                <HiOutlineArrowSmDown />
+                {/*  <HiOutlineArrowSmUp className="swap-off" /> */}
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu text-center shadow bg-base-100 rounded-box w-full"
+              >
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 hover:bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    De Obra
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 border hover:bg-gray-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Adquisición de Materiales
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 border hover:bg-gray-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Herramienta o Equipos
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 border hover:bg-gray-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Renta de Maquinaria
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="shadow-sm bg-gray-50 border hover:bg-gray-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    required
+                  >
+                    Otro
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* <input
               type="password"
               id="repeat-password"
               className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
               required
-            />
+            /> */}
           </div>
         </div>
 
-        <div className="flex items-start mb-6">
+        {/* <div className="flex items-start mb-6 mt-40">
           <div className="flex items-center h-5">
             <input
               id="terms"
@@ -136,20 +263,14 @@ const PostFiles = () => {
             htmlFor="terms"
             className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >
-            I agree with the{" "}
-            <a
-              href="#"
-              className="text-blue-600 hover:underline dark:text-blue-500"
-            >
-              terms and conditions
-            </a>
+            Esta seguro de crear expediente en la base de datos?
           </label>
-        </div>
+        </div> */}
         <button
           type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="mt-60 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          Register new account
+          Crear Expediente
         </button>
       </form>
     </>
