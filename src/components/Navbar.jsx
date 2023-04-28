@@ -22,16 +22,11 @@ const Navbar = ({ setAuth }) => {
       link: "/postFiles",
       name: "Crear Expediente",
     },
-    {
+    /* {
       id: 3,
       link: "getStadistics",
       name: "Mostrar Estadisticas",
-    },
-    {
-      id: 4,
-      link: "rutaNueva",
-      name: "nuevaRuta",
-    },
+    }, */
   ];
 
   return (
