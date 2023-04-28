@@ -10,31 +10,25 @@ const Login = ({ setAuth }) => {
   return (
     <>
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-lg">
-          <h1 className="text-center text-2xl font-bold text-[#36b5d3] sm:text-3xl">
+        <div className="mx-auto max-w-lg mt-40">
+          {/* <h1 className="text-center text-2xl font-bold text-[#36b5d3] sm:text-3xl">
             Get started today
-          </h1>
+          </h1> */}
 
-          <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
+          {/* <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
             sunt dolores deleniti inventore quaerat mollitia?
-          </p>
+          </p> */}
 
-          <form className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
-            <p className="text-center text-lg font-medium">
-              Sign in to your account
-            </p>
+          <form className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-xl shadow-gray-500 sm:p-6 lg:p-8">
+            <p className="text-center text-lg font-medium">Iniciar Sesion</p>
 
             <div>
-              <label htmlFor="email" className="sr-only">
-                Email
-              </label>
-
               <div className="relative">
                 <input
                   type="email"
                   className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-                  placeholder="Enter email"
+                  placeholder="Correo Electronico"
                 />
 
                 <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -44,15 +38,11 @@ const Login = ({ setAuth }) => {
             </div>
 
             <div>
-              <label htmlFor="password" className="sr-only">
-                Password
-              </label>
-
               <div className="relative">
                 <input
                   type="password"
                   className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-                  placeholder="Enter password"
+                  placeholder="Contraseña"
                 />
 
                 <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -64,14 +54,14 @@ const Login = ({ setAuth }) => {
             <button
               onClick={handlerLogin}
               type="submit"
-              className="block w-full rounded-lg bg-[#36b5d3] px-5 py-3 text-sm font-medium text-white"
+              className="block w-full hover:text-black hover:scale-105 duration-300 rounded-lg bg-[#36b5d3] px-5 py-3 text-sm font-medium text-white"
             >
-              Sign in
+              Ingresar
             </button>
 
             <p className="text-center text-sm text-gray-500">
               Olvidaste tu constraseña?
-              <a className="underline" href="">
+              <a className="underline ml-1" href="">
                 Restablecer
               </a>
             </p>

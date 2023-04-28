@@ -87,7 +87,7 @@ const GetFiles = () => {
                       {/* row 2 */}
                       <tr className="">
                         <td className="font-bold">Quien cargo</td>
-                        <td>{data.name}</td>
+                        <td>{data.user}</td>
                       </tr>
                       {/* row 3 */}
                       <tr>

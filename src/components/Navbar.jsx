@@ -64,7 +64,7 @@ const Navbar = ({ setAuth }) => {
           />
         </div>
       </nav> */}
-      <div className="w-full h-16 bg-gray-900 text-white z-20  ">
+      <div className="fixed w-full h-16 bg-black text-white z-20  ">
         <div className="flex justify-between  md:gap-5 items-center max-w-screen-xl mx-auto px-8 h-full">
           <div className="hidden lg:flex items-center">
             <ul className="flex ">
@@ -90,7 +90,7 @@ const Navbar = ({ setAuth }) => {
 
             <BiUserCircle
               onClick={handlerLogout}
-              className="text-2xl cursor-pointer hover:text-[#36b5d3] duration-300 hover:scale-110"
+              className="text-4xl cursor-pointer hover:text-[#36b5d3] duration-300 hover:scale-110"
             />
           </div>
         </div>
